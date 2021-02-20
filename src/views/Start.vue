@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="start">开始任务</button>
+    <button @click="enterHLM">红浪漫入口</button>
   </div>
 </template>
 
@@ -21,6 +22,9 @@ export default defineComponent({
     let router = useRouter();
     let back = () => {
       router.back();
+    };
+    let enterHLM = () => {
+      router.push("/entry");
     };
     let start = () => {
       // query 传参 可以用path  和 name
@@ -47,6 +51,7 @@ export default defineComponent({
       arr,
       obj,
       num1,
+      enterHLM,
     };
   },
 });
